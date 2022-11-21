@@ -1,0 +1,46 @@
+
+
+
+
+
+
+
+
+
+
+
+<div>
+    <div>
+        <h2>Projet</h2>
+        <form [formGroup]="cpfs.projetForm" (ngSubmit)="submit()">
+
+            <input type="text" placeholder="Entrez votre titre" formControlName="title">
+            <span class="error" *ngIf="cpfs.projetForm.get('title')?.touched && cpfs.projetForm.get('title')?.errors?.['required']">Le champs est requis</span>
+
+            <input type="date" formControlName="dateDebut">
+            <span class="error" *ngIf="cpfs.projetForm.get('dateDebut')?.touched && cpfs.projetForm.get('dateDebut')?.errors?.['required']">Le champs est requis</span>
+
+            <input type="date" formControlName="dateFin">
+            <span class="error" *ngIf="cpfs.projetForm.get('dateFin')?.touched && cpfs.projetForm.get('dateFin')?.errors?.['required']">Le champs est requis</span>
+
+            <input type="number" placeholder="Entrez votre objectif" formControlName="objectif">
+            <span class="error" *ngIf="cpfs.projetForm.get('objectif')?.touched && cpfs.projetForm.get('objectif')?.errors?.['required']">Le champs est requis</span>
+
+            <textarea placeholder="Entrez votre description" formControlName="description"></textarea>
+            <span class="error" *ngIf="cpfs.projetForm.get('description')?.touched && cpfs.projetForm.get('description')?.errors?.['required']">Le champs est requis</span>
+
+            <input type="text" placeholder="Entrez votre compte bancaire" formControlName="compteBQ">
+            <span class="error" *ngIf="cpfs.projetForm.get('compteBQ')?.touched && cpfs.projetForm.get('compteBQ')?.errors?.['required']">Le champs est requis</span>
+
+            <div *ngFor="let p of cpfs.projetForm.value.paliers ; let i = index">
+                <app-create-palier-form [index]= "i" ></app-create-palier-form>
+            </div>
+            
+            <input type="button" value="ADD Palier" (click)="addPalier()">
+
+
+            <input type="submit" value="Submit">
+
+        </form>
+    </div>
+</div>

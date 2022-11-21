@@ -1,0 +1,18 @@
+<div>
+    <div>
+        <form [formGroup]="palierForm">
+
+            <input type="text" placeholder="Entrez votre titre" formControlName="title">
+            <span class="error" *ngIf="palierForm.get('title')?.touched && palierForm.get('title')?.errors?.['required']">Le champs est requis</span>
+
+            <input type="number" placeholder="Entrez le montant" formControlName="montant">
+            <span class="error" *ngIf="palierForm.get('montant')?.touched && palierForm.get('montant')?.errors?.['required']">Le champs est requis</span>
+
+            <textarea type="number" placeholder="Entrez une description" formControlName="description"></textarea>
+            <span class="error" *ngIf="palierForm.get('description')?.touched && palierForm.get('description')?.errors?.['required']">Le champs est requis</span>
+
+            <input type="button" value="Remove" (click)="removePlier()">
+
+        </form>
+    </div>
+</div>
