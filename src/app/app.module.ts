@@ -19,8 +19,7 @@ import { CreatePalierFormComponent } from './componants/create-projet-form/creat
     LoginComponent,
     RegisterComponent,
     CreateProjetFormComponent,
-    CreatePalierFormComponent
-    RegisterComponent,
+    CreatePalierFormComponent,
     HomeComponent,
     NavbarComponent,
     FooterComponent
