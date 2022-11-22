@@ -6,6 +6,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './componants/login/login.component';
 import { RegisterComponent } from './componants/register/register.component';
+import { HomeComponent } from './componants/home/home.component';
+import { NavbarComponent } from './componants/navbar/navbar.component';
+import { FooterComponent } from './componants/footer/footer.component';
+
 import { CreateProjetFormComponent } from './componants/create-projet-form/create-projet-form.component';
 import { CreatePalierFormComponent } from './componants/create-projet-form/create-palier-form/create-palier-form.component';
 
@@ -16,6 +20,11 @@ import { CreatePalierFormComponent } from './componants/create-projet-form/creat
     RegisterComponent,
     CreateProjetFormComponent,
     CreatePalierFormComponent
+    RegisterComponent,
+    HomeComponent,
+    NavbarComponent,
+    FooterComponent
+
   ],
   imports: [
     BrowserModule,

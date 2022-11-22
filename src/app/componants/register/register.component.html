@@ -1,4 +1,4 @@
-<p>register works!</p>
+
 
 
 <div>
@@ -21,7 +21,7 @@
             <input type="password" placeholder="Confirmez votre mot de passe" formControlName="confirmPassword">
             <span class="error" *ngIf="registerForm.get('confirmPassword')?.touched && registerForm.get('confirmPassword')?.errors?.['required']">Le champs est requis</span>
             <span class="error" *ngIf="registerForm.errors?.['notsame']">Le mot de passe n'est pas identique</span>
-            
+
             <input type="date" formControlName="birtDay">
             <span class="error" *ngIf="registerForm.get('birtDay')?.touched && registerForm.get('birtDay')?.errors?.['required']">Le champs est requis</span>
 
@@ -33,7 +33,7 @@
             <span class="error" *ngIf="registerForm.get('role')?.touched && registerForm.get('role')?.errors?.['required']">Le champs est requis</span>
 
             <input type="submit" value="Créer mon compte">
-        </form>        
+        </form>
         <a routerLink="/login">Déjà un compte ? Cliquez ici pour vous connecter</a>
     </div>
 </div>
