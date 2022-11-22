@@ -1,9 +1,15 @@
 
-input,select{
-    margin: 1%;
+
+.palier{
+    margin-top: 10%;
+    margin-bottom: 10%;
 }
 
-.error{
-    font-size: smaller;
-    color: red;
+.remove{
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
 }

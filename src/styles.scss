@@ -23,7 +23,6 @@ body{
   color: #315594;
 }
 
-
 /*BOTTON SPECIFIQUE*/
 .button {
   display: inline-block;
@@ -160,4 +159,11 @@ body{
   margin-bottom:70px;
 }
 
+.error{
+  font-size: smaller;
+  color: red;
+}
 
+.fingerCursor:hover{
+  cursor: pointer;
+}

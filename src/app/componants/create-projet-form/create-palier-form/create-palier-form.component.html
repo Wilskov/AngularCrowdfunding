@@ -1,17 +1,37 @@
-<div>
+<div class="palier">
+    <div class="colorBtn-1 p-3 text-capitalize text-white d-flex justify-content-between">
+        <div> Palier {{index+1}}</div>
+        <input type="button" value="❌" class="remove" (click)="removePlier()">
+    </div>
     <div>
         <form [formGroup]="palierForm">
 
-            <input type="text" placeholder="Entrez votre titre" formControlName="title">
-            <span class="error" *ngIf="palierForm.get('title')?.touched && palierForm.get('title')?.errors?.['required']">Le champs est requis</span>
+            <div class="form-group  ">
+                <label for="" class="fw-bold mb-1">Titre</label>
+                <input type="text" class="form-control shadow mb-1" placeholder="Titre" formControlName="title">
+                <span class="error"
+                    *ngIf="palierForm.get('title')?.touched && palierForm.get('title')?.errors?.['required']">Le
+                    champs
+                    est requis</span>
+            </div>
 
-            <input type="number" placeholder="Entrez le montant" formControlName="montant">
-            <span class="error" *ngIf="palierForm.get('montant')?.touched && palierForm.get('montant')?.errors?.['required']">Le champs est requis</span>
+            <div class="form-group  ">
+                <label for="" class="fw-bold mb-1">Montant</label>
+                <input type="number" class="form-control shadow mb-1" formControlName="montant" placeholder="10 000">
+                <span class="error"
+                    *ngIf="palierForm.get('title')?.touched && palierForm.get('title')?.errors?.['required']">Le
+                    champs
+                    est requis</span>
+            </div>
 
-            <textarea type="number" placeholder="Entrez une description" formControlName="description"></textarea>
-            <span class="error" *ngIf="palierForm.get('description')?.touched && palierForm.get('description')?.errors?.['required']">Le champs est requis</span>
-
-            <input type="button" value="Remove" (click)="removePlier()">
+            <div class="form-group  ">
+                <label for="" class="fw-bold mb-1">Description</label>
+                <textarea type="text" class="form-control shadow mb-1" placeholder="description"
+                    formControlName="description"></textarea>
+                <span class="error"
+                    *ngIf="palierForm.get('description')?.touched && palierForm.get('description')?.errors?.['required']">Le
+                    champs est requis</span>
+            </div>
 
         </form>
     </div>

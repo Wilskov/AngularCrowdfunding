@@ -20,6 +20,9 @@ export class CreatProjetFormServiceService {
       compteBQ : [null,[Validators.required]],
       paliers : [[],[Validators.required]]
     })
+    this.addPalier()
+    this.addPalier()
+    this.addPalier()
 
   }
 
