@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AbstractControl, FormBuilder, FormGroup, ValidationErrors, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { IRole } from 'src/app/Interface/role';
+import { RegisterUserModel } from 'src/app/models/RegisterUser.model';
 import { AuthService } from 'src/app/services/auth.service';
 
 
@@ -45,7 +46,14 @@ export class RegisterComponent implements OnInit {
   register() : void {
     console.log(this.registerForm.value)
     if(this.registerForm.valid){
-      console.log(this.registerForm.value)
+      console.log(this.registerForm.value)     
+      const rum = new  RegisterUserModel( this.registerForm.value.email,
+                                          this.registerForm.value.password,
+                                          this.registerForm.value.nickname,
+                                          this.registerForm.value.birtDay,
+                                          Number(this.registerForm.value.role)
+                                          )
+      this._authService.register(rum)
     }
     else {
       this.registerForm.markAllAsTouched()
@@ -61,16 +69,6 @@ export class RegisterComponent implements OnInit {
       return null
 
     return { notsame : true }
-
-    /*
-
-    if(group.get('password')?.value != "" && group.get('confirmPassword')?.value != ""){
-      if(group.get('password')?.value != group.get('confirmPassword')?.value){
-        return { notsame : true }
-      }
-      return null;
-    }
-    return null;    */
   }
 
 }

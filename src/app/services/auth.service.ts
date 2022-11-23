@@ -12,23 +12,18 @@ export class AuthService {
 
   private _url : string = "http://localhost:5011/api/User/";
 
-  private _isConnected$ : BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
-  
-  isConnected$ : Observable<boolean> = this._isConnected$.asObservable();
+  private _isConnected$ : BehaviorSubject<ConnectedUsermodel | null> = new BehaviorSubject<ConnectedUsermodel | null>(null);
+  isConnected$ : Observable<ConnectedUsermodel | null> = this._isConnected$.asObservable();
 
   constructor(private _httpClient : HttpClient, private _router : Router) { }
 
 
   register(registerForm : any) : void {
-    /*this._httpClient.post<Token>(this._url+'register', registerForm).subscribe({
+    this._httpClient.post<ConnectedUsermodel>(this._url+'register', registerForm).subscribe({
       next : (res) => {
-        //On met le token en localStorage
-        localStorage.setItem('token', res.token);
-        this._isConnected$.next(true);
-        this._router.navigateByUrl('/');
-
+        this.connectUser(res)
       }
-    });*/
+    });
   }
 
 
@@ -36,18 +31,19 @@ export class AuthService {
     console.log(loginForm)
     this._httpClient.post<ConnectedUsermodel>(this._url+'login', loginForm).subscribe({
       next : (res) => {
-        console.log(res)
-        /*localStorage.setItem('token', res.token);
-        this._isConnected$.next(true);
-        this._router.navigateByUrl('/');*/
+        this.connectUser(res)
       }
     }
     );
   }
 
+  private connectUser(user : ConnectedUsermodel):void{
+    localStorage.setItem('token', user.token);
+    this._isConnected$.next(user);
+  }
+
   logout() : void {
     localStorage.removeItem('token');
-    this._isConnected$.next(false);
-    this._router.navigateByUrl('/');
+    this._isConnected$.next(null);
   }
 }
