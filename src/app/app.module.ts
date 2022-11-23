@@ -1,5 +1,5 @@
-import { CreatePalierFormComponent } from './componants/create-projet-form/create-palier-form/create-palier-form.component';
-import { CreateProjetFormComponent } from './componants/create-projet-form/create-projet-form.component';
+import { CreatePalierFormComponent } from './componants/projets/create-projet-form/create-palier-form/create-palier-form.component';
+import { CreateProjetFormComponent } from './componants/projets/create-projet-form/create-projet-form.component';
 import { RegisterComponent } from './componants/register/register.component';
 import { NavbarComponent } from './componants/navbar/navbar.component';
 import { FooterComponent } from './componants/footer/footer.component';
