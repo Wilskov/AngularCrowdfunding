@@ -1,10 +1,10 @@
 
 <!--Navbar-->
-<app-navbar></app-navbar>
+<app-navbar *ngIf="isVisible"></app-navbar>
 
 <!--content-->
 <router-outlet></router-outlet>
 
 <!--Footer-->
-<app-footer></app-footer>
+<app-footer *ngIf="isVisible"></app-footer>
 
