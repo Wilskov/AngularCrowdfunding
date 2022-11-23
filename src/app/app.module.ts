@@ -10,6 +10,8 @@ import { RegisterComponent } from './componants/register/register.component';
 import { HomeComponent } from './componants/home/home.component';
 import { NavbarComponent } from './componants/navbar/navbar.component';
 import { FooterComponent } from './componants/footer/footer.component';
+import { IndexComponent } from './componants/projets/index/index.component';
+import { ShowComponent } from './componants/projets/show/show.component';
 
 
 @NgModule({
@@ -19,7 +21,9 @@ import { FooterComponent } from './componants/footer/footer.component';
     RegisterComponent,
     HomeComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    IndexComponent,
+    ShowComponent
 
   ],
   imports: [

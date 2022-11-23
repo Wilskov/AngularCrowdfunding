@@ -13,6 +13,7 @@ export class AuthService {
   private _url : string = "http://localhost:5011/api/User/";
 
   private _isConnected$ : BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
+  
   isConnected$ : Observable<boolean> = this._isConnected$.asObservable();
 
   constructor(private _httpClient : HttpClient, private _router : Router) { }
