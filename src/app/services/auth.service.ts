@@ -30,7 +30,6 @@ export class AuthService {
     });*/
   }
 
-
   login(loginForm : loginModel) : void {
     console.log(loginForm)
     this._httpClient.post<ConnectedUsermodel>(this._url+'login', loginForm).subscribe({
