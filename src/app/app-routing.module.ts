@@ -5,14 +5,16 @@ import { CreatePalierFormComponent } from './componants/projets/create-projet-fo
 import { CreateProjetFormComponent } from './componants/projets/create-projet-form/create-projet-form.component';
 import { LoginComponent } from './componants/login/login.component';
 import { RegisterComponent } from './componants/register/register.component';
+import { ShowComponent } from './componants/projets/show/show.component';
 
 const routes: Routes = [
   {path:"",component:HomeComponent},
   {path:"home",component:HomeComponent},
-  { path : "register", component : RegisterComponent},
-  { path : "login", component : LoginComponent},
-  { path : "createprojet", component : CreateProjetFormComponent},
-  { path : "palier", component : CreatePalierFormComponent},
+  {path : "register", component : RegisterComponent},
+  {path : "login", component : LoginComponent},
+  {path : "createprojet", component : CreateProjetFormComponent},
+  {path : "palier", component : CreatePalierFormComponent},
+  {path : "projetCard", component : ShowComponent},
 ];
 
 @NgModule({
