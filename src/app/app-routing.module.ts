@@ -6,6 +6,7 @@ import { CreateProjetFormComponent } from './componants/projets/create-projet-fo
 import { LoginComponent } from './componants/login/login.component';
 import { RegisterComponent } from './componants/register/register.component';
 import { ShowComponent } from './componants/projets/show/show.component';
+import { IndexComponent } from './componants/projets/index/index.component';
 
 const routes: Routes = [
   {path:"",component:HomeComponent},
@@ -14,11 +15,13 @@ const routes: Routes = [
   {path : "login", component : LoginComponent},
   {path : "createprojet", component : CreateProjetFormComponent},
   {path : "palier", component : CreatePalierFormComponent},
-  {path : "projetCard", component : ShowComponent},
+  {path : "projetDetail", component : ShowComponent},
+  {path : "projetCard", component : IndexComponent},
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
+
 export class AppRoutingModule { }

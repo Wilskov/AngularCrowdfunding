@@ -8,6 +8,8 @@ export class showProjetModel {
     Objectif: number
     TypeStatus: string
     ContributionTotal: number
+    paliers: CreatPalierModel[]
+    progress : number
     
     constructor(
         id: number,
@@ -25,6 +27,11 @@ export class showProjetModel {
         this.TypeStatus = TypeStatus
         this.ContributionTotal = ContributionTotal
         this.paliers = paliers
-    } paliers: CreatPalierModel[]
+
+        if(this.ContributionTotal >= this.Objectif) 
+            this.progress = 100
+        else 
+            this.progress = this.ContributionTotal / this.Objectif * 100
+    } 
 
 }
