@@ -15,4 +15,5 @@ export class ShowComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
 }

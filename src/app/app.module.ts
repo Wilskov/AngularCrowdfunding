@@ -13,6 +13,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { NgModule } from '@angular/core';
 import { IndexComponent } from './componants/projets/index/index.component';
+import { CardComponent } from './componants/projets/card/card.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,10 @@ import { IndexComponent } from './componants/projets/index/index.component';
     CreatePalierFormComponent,
     HomeComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    IndexComponent,
+    ShowComponent,
+    CardComponent,
 
   ],
   imports: [
