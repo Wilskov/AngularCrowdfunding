@@ -1,98 +1,61 @@
-creer un module Admin 
- => composant d'amorssage (creer un module avec son composant)
- 
-<div class="demande">
-    <table class="table">
-        <thead class="header">
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">Titre</th>
-            <th scope="col">Categories</th>
-            <th scope="col">s</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td colspan="2">Larry the Bird</td>
-            <td>@twitter</td>
-          </tr>
-        </tbody>
-      </table>
-</div>
-<div class="projet">
-    <table class="table">
-        <thead class="header">
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">Titre</th>
-            <th scope="col">Categories</th>
-            <th scope="col">Budget</th>
-            <th scope="col">Projet Owner</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>100000</td>
-            <td>POPOl</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td colspan="2">Larry the Bird</td>
-            <td>@twitter</td>
-          </tr>
-        </tbody>
-      </table>
-</div>
-<div class="membre">
-    <table class="table">
-        <thead class="header">
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">Nom</th>
-            <th scope="col">Categories</th>
-            <th scope="col">s</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td colspan="2">Larry the Bird</td>
-            <td>@twitter</td>
-          </tr>
-        </tbody>
-      </table>
+<div class="admin">
+    <div class="admin__header">
+        <h1 class="admin__title">Admin Panel</h1>
+        <div class="admin__header__buttons">
+            <!-- <button class="btn btn-primary" (click)="addProject()">Add Project</button>
+            <button class="btn btn-primary" (click)="addUser()">Add User</button> -->
+        </div>
+    </div>
+    <div class="admin__content">
+      <div class="admin__content__projects">
+        <h2 class="admin__content__projects__title">New projects</h2>
+        <div class="admin__content__projects__list">
+            <div class="admin__content__projects__list__item" *ngFor="let newProject of projects">
+                <div class="admin__content__projects__list__item__header">
+                    <h3 class="admin__content__projects__list__item__header__title">{{newProject.title}}</h3>
+                    <div class="admin__content__projects__list__item__header__buttons">
+                        <button class="btn btn-primary" (click)="AcceptNewProject(newProject)">Accept</button>
+                        <button class="btn btn-danger" (click)="RefuseNewProject(newProject)">Refuse</button>
+                    </div>
+                </div>
+                <div class="admin__content__projects__list__item__content">
+                    <p class="admin__content__projects__list__item__content__description">{{newProject.description}}</p>
+                    <div class="admin__content__projects__list__item__content__progress">
+                        <div class="progress bg-secondary" style="height:7px;">
+                            <!-- <div class="progress-bar" [ngStyle]="{'width.%': newProject.progress}"></div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div class="admin__content__projects">
+            <h2 class="admin__content__projects__title">Projects</h2>
+            <div class="admin__content__projects__list">
+                <div class="admin__content__projects__list__item" *ngFor="let project of projects">
+                    <div class="admin__content__projects__list__item__header">
+                        <h3 class="admin__content__projects__list__item__header__title">{{project.title}}</h3>
+                        <div class="admin__content__projects__list__item__header__buttons">
+                            
+                            <button class="btn btn-primary" (click)="editProject(project)">Edit</button>
+                            <button class="btn btn-danger" (click)="deleteProject(project)">Delete</button>
+                        </div>
+                    </div>
+                    <div class="admin__content__projects__list__item__content">
+                        <p class="admin__content__projects__list__item__content__description">{{project.description}}</p>
+                        <div class="admin__content__projects__list__item__content__progress">
+                            <div class="progress bg-secondary" style="height:7px;">
+                                <!-- <div class="progress-bar" [ngStyle]="{'width.%': project.progress}"></div> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="admin__content__users">
+            <h2 class="admin__content__users__title">Users</h2>
+            <div class="admin__content__users__list">
+                <div class="admin__content__users__list__item" *ngFor="let user of users">
+                    <div class="admin__content__users__list__item__header">
+                        <h3 class="admin__content__users__list__item__header__title">{{user.name}}</h3>
 </div>

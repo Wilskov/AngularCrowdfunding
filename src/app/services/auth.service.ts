@@ -37,6 +37,7 @@ export class AuthService {
   }
 
   private connectUser(user : ConnectedUsermodel):void{
+    console.log(user)//TODO remove log
     localStorage.setItem('token', user.token);
     this._isConnected$.next(user);
   }

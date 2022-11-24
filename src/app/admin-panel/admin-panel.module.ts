@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { AdminPanelRoutingModule } from './admin-panel-routing.module';
 import { NavbarComponent } from './navbar/navbar.component';
-import { AdminRoutingModule } from '../admin-routing.module';
+import { AdminRoutingModule } from './admin-routing.module';
 import { AdminComponent } from './admin/admin.component';
 import { ProjetsComponent } from './projets/projets.component';
 import { UsersComponent } from './users/users.component';

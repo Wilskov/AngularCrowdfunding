@@ -2,10 +2,12 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AdminComponent } from './admin-panel/admin/admin.component';
 import { HomeComponent } from './componants/home/home.component';
-import { CreatePalierFormComponent } from './componants/create-projet-form/create-palier-form/create-palier-form.component';
-import { CreateProjetFormComponent } from './componants/create-projet-form/create-projet-form.component';
+import { CreatePalierFormComponent } from './componants/projets/create-projet-form/create-palier-form/create-palier-form.component';
+import { CreateProjetFormComponent } from './componants/projets/create-projet-form/create-projet-form.component';
 import { LoginComponent } from './componants/login/login.component';
 import { RegisterComponent } from './componants/register/register.component';
+// import { ShowComponent } from './componants/projets/show/show.component';
+// import { IndexComponent } from './componants/projets/index/index.component';
 
 const routes: Routes = [ 
   {path:"users",component:HomeComponent},
@@ -21,4 +23,5 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
+
 export class AppRoutingModule { }

@@ -1,6 +1,7 @@
-import { CreatePalierFormComponent } from './componants/create-projet-form/create-palier-form/create-palier-form.component';
-import { CreateProjetFormComponent } from './componants/create-projet-form/create-projet-form.component';
+import { CreatePalierFormComponent } from './componants/projets/create-projet-form/create-palier-form/create-palier-form.component';
+import { CreateProjetFormComponent } from './componants/projets/create-projet-form/create-projet-form.component';
 import { RegisterComponent } from './componants/register/register.component';
+import { ShowComponent } from './componants/projets/show/show.component';
 import { NavbarComponent } from './componants/navbar/navbar.component';
 import { FooterComponent } from './componants/footer/footer.component';
 import { AdminComponent } from './admin-panel/admin/admin.component';
@@ -12,7 +13,6 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
 
 @NgModule({
   declarations: [
