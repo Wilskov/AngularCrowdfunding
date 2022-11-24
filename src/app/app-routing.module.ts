@@ -10,13 +10,13 @@ import { RegisterComponent } from './componants/register/register.component';
 // import { IndexComponent } from './componants/projets/index/index.component';
 
 const routes: Routes = [ 
-  {path:"users",component:HomeComponent},
-  {path:"home",component:HomeComponent},
-  { path : "register", component : RegisterComponent},
-  { path : "login", component : LoginComponent},
-  { path: 'admin', component: AdminComponent, canActivate: []},
-  { path : "createprojet", component : CreateProjetFormComponent},
-  { path : "palier", component : CreatePalierFormComponent},
+  {path:"users",component : HomeComponent},
+  {path:"home",component : HomeComponent},
+  {path:"register",component : RegisterComponent},
+  {path:"login",component : LoginComponent},
+  {path:'admin',component: AdminComponent, canActivate: []},
+  {path:"createprojet",component : CreateProjetFormComponent},
+  {path:"palier",component : CreatePalierFormComponent},
 ];
 
 @NgModule({

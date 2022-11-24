@@ -11,14 +11,12 @@ import { AuthService } from './services/auth.service';
 
 export class AppComponent {
   
-  isAdmin: boolean = true; 
+  isAdmin: boolean = false; 
 
-  title = 'AngularCrowdfunding'
-  test : string = "test"
   constructor (private router : Router, private authService : AuthService) {
     authService.isConnected$.subscribe((u:ConnectedUsermodel | null) => {
-      // let u2 : ConnectedUsermodel = u
-      // this.isAdmin = u ? true : (u?.role == "Admin")
+      this.isAdmin = u ? (u.role === "Admin") : false
+      console.log(`is admin ${this.isAdmin}`)
     })
   }
 
