@@ -1,10 +1,10 @@
 
 <!--Navbar-->
-<app-navbar></app-navbar>
+<app-navbar *ngIf="isAdmin"></app-navbar>
 
 <!--content-->
-<router-outlet></router-outlet>
+<router-outlet *ngIf="isAdmin"></router-outlet>
 
 <!--Footer-->
-<app-footer></app-footer>
+<app-footer *ngIf="isAdmin"></app-footer>
 

@@ -1,0 +1,44 @@
+nav {
+    width: 20vw;
+    min-height: 100%;
+    background-color: #315594;
+    border-radius: 5%;
+}
+
+.main-menu {
+    margin: 0;
+    padding: 0;
+    padding-top: 2%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+li {
+    list-style: none;
+    margin: 2% 4%;
+}
+
+a {
+    text-decoration: none;
+    color: #70A6C1;
+}
+
+a:hover {
+    color: darksalmon;
+}
+
+.secondary-menu {
+    margin: 0;
+    padding: 0;
+    padding-left: 2%;
+    padding-top: 2%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.isActive {
+    text-decoration: underline;
+    font-weight: bold;
+}
