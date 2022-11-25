@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { CreatPalierModel } from 'src/app/users/models/CreatePalier.Model';
-import { CreatProjetFormServiceService } from 'src/app/users/services/creat-projet-form-service.service';
+import { CreatProjetFormServiceService } from 'src/app/services/creat-projet-form-service.service';
 
 @Component({
   selector: 'app-create-projet-form',

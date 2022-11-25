@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { BehaviorSubject, Observable } from 'rxjs';
-import { loginModel } from '../models/login.model';
-import { ConnectedUsermodel } from '../models/ConnectedUser.model';
+import { loginModel } from '../users/models/login.model';
+import { ConnectedUsermodel } from '../users/models/ConnectedUser.model';
 
 @Injectable({
   providedIn: 'root'

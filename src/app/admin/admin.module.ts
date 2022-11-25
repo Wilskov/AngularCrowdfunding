@@ -3,29 +3,24 @@ import { CommonModule } from '@angular/common';
 
 import { AdminRoutingModule } from './admin-routing.module';
 import { AdminComponent } from './admin.component';
-import { UsersModule } from "../users/users.module";
-import { NavbarComponent } from './navbar-admin/navbar.component';
+import { NavbarAdminComponent } from './navbar-admin/navbar.component';
 import { HomeAdminComponent } from './home-admin/home-admin.component';
-import { LoginComponent } from '../users/componants/login/login.component';
-import { CreatePalierFormComponent } from '../users/componants/projets/create-projet-form/create-palier-form/create-palier-form.component';
-import { CreateProjetFormComponent } from '../users/componants/projets/create-projet-form/create-projet-form.component';
-import { RegisterComponent } from '../users/componants/register/register.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { UsersRoutingModule } from '../users/users-routing.module';
 
 
 @NgModule({
     declarations: [
         AdminComponent,
-        NavbarComponent,
+        NavbarAdminComponent,
         HomeAdminComponent,
-        // LoginComponent,
-        // RegisterComponent,
-        // CreateProjetFormComponent,
-        // CreatePalierFormComponent,
+      
     ],
     imports: [
         CommonModule,
-        AdminRoutingModule,
-        
-    ]
+        ReactiveFormsModule,
+        UsersRoutingModule
+    ],
+    // bootstrap: [AdminComponent]
 })
 export class AdminModule { }

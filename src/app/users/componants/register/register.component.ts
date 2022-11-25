@@ -3,7 +3,7 @@ import { AbstractControl, FormBuilder, FormGroup, ValidationErrors, Validators }
 import { Router } from '@angular/router';
 import { IRole } from 'src/app/Interface/role';
 import { RegisterUserModel } from 'src/app/users/models/RegisterUser.model';
-import { AuthService } from 'src/app/users/services/auth.service';
+import { AuthService } from 'src/app/services/auth.service';
 
 
 @Component({
@@ -19,12 +19,8 @@ export class RegisterComponent implements OnInit {
   {id:2, role:"Contributeur"},
   {id:3, role:"projectOwner"},
  ]
-
-
-
-
   registerForm : FormGroup;
-
+  
   constructor(private _fb : FormBuilder,
               private _authService : AuthService,
               private _router : Router) {

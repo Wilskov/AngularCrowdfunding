@@ -7,7 +7,7 @@ import { CreateProjetFormComponent } from './componants/projets/create-projet-fo
 import { IndexComponent } from './componants/projets/index/index.component';
 import { RegisterComponent } from './componants/register/register.component';
 
-const routes: Routes = [
+const usersRoutes: Routes = [
   { path : "home",component : HomeComponent},
   { path : "register", component : RegisterComponent},
   { path : "login", component : LoginComponent},
@@ -17,7 +17,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forChild(routes)],
+  imports: [RouterModule.forChild(usersRoutes)],
   exports: [RouterModule]
 })
 export class UsersRoutingModule { }

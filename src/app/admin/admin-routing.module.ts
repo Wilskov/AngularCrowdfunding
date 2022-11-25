@@ -1,15 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeAdminComponent } from './home-admin/home-admin.component';
-import { NavbarComponent } from './navbar-admin/navbar.component';
+import { NavbarAdminComponent } from './navbar-admin/navbar.component';
 
-const routes: Routes = [
+const adminRoutes: Routes = [
   { path : "home-admin",component : HomeAdminComponent},
-  { path : "login", component : NavbarComponent},
+  { path : "navbar", component : NavbarAdminComponent},
 ];
 
 @NgModule({
-  imports: [RouterModule.forChild(routes)],
+  imports: [RouterModule.forChild(adminRoutes)],
   exports: [RouterModule]
 })
 export class AdminRoutingModule { }

@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { showProjetModel } from 'src/app/models/Projet.show.model';
+import { showProjetModel } from 'src/app/users/models/Projet.show.model';
 
 @Component({
   selector: 'app-index',
