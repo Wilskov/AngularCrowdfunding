@@ -13,6 +13,10 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { Comment } from '@angular/compiler';
+import { CommonModule } from '@angular/common';
+import {IndexComponent} from './componants/projets/index/index.component'
+
 
 @NgModule({
   declarations: [
@@ -24,7 +28,8 @@ import { AppComponent } from './app.component';
     HomeComponent,
     NavbarComponent,
     FooterComponent,
-    // AdminComponent
+    IndexComponent
+        // AdminComponent
 
   ],
   imports: [

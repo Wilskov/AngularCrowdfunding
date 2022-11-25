@@ -13,6 +13,7 @@ export class CreateProjetModel {
 	idStatus: number
 	paliers: CreatPalierModel[]
 
+
 	constructor(
 		titre: string,
 		description: string,

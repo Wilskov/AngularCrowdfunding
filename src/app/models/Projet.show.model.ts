@@ -9,8 +9,13 @@ export class showProjetModel {
     TypeStatus: string
     ContributionTotal: number
     paliers: CreatPalierModel[]
-    progress : number
-    
+    progress: number
+
+    compteBQ: string
+    dateDebut: Date
+    dateFin: Date
+
+
     constructor(
         id: number,
         titre: string,
@@ -18,7 +23,10 @@ export class showProjetModel {
         Objectif: number,
         TypeStatus: string,
         ContributionTotal: number,
-        paliers: CreatPalierModel[]
+        paliers: CreatPalierModel[],
+        compteBQ: string,
+        dateDebut: Date,
+        dateFin: Date
     ) {
         this.id = id
         this.titre = titre
@@ -27,11 +35,14 @@ export class showProjetModel {
         this.TypeStatus = TypeStatus
         this.ContributionTotal = ContributionTotal
         this.paliers = paliers
+        this.compteBQ = compteBQ
+        this.dateDebut = dateDebut
+        this.dateFin = dateFin
 
-        if(this.ContributionTotal >= this.Objectif) 
+        if (this.ContributionTotal >= this.Objectif)
             this.progress = 100
-        else 
+        else
             this.progress = this.ContributionTotal / this.Objectif * 100
-    } 
+    }
 
 }

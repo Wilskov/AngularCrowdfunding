@@ -7,14 +7,15 @@ import { CreateProjetFormComponent } from './componants/projets/create-projet-fo
 import { LoginComponent } from './componants/login/login.component';
 import { RegisterComponent } from './componants/register/register.component';
 // import { ShowComponent } from './componants/projets/show/show.component';
-// import { IndexComponent } from './componants/projets/index/index.component';
+import { IndexComponent } from './componants/projets/index/index.component';
 
 const routes: Routes = [ 
+  {path:"card",component : IndexComponent},
   {path:"users",component : HomeComponent},
   {path:"home",component : HomeComponent},
   {path:"register",component : RegisterComponent},
   {path:"login",component : LoginComponent},
-  {path:'admin',component: AdminComponent, canActivate: []},
+  //{path:'admin',component: AdminComponent, canActivate: []},
   {path:"createprojet",component : CreateProjetFormComponent},
   {path:"palier",component : CreatePalierFormComponent},
 ];
