@@ -17,8 +17,7 @@ export class AppComponent {
   test : string = "test"
   constructor (private router : Router, private authService : AuthService) {
     authService.isConnected$.subscribe((u:ConnectedUsermodel | null) => {
-      // let u2 : ConnectedUsermodel = u
-      // this.isAdmin = u ? true : (u?.role == "Admin")
+      // this.isAdmin = u ? true : (u?.role == "Admin")   
     })
   }
 
