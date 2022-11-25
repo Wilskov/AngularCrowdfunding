@@ -12,8 +12,8 @@ export class AuthService {
 
   private _url : string = "http://localhost:5011/api/User/";
 
-  private _isConnected$ : BehaviorSubject<ConnectedUsermodel | null> = new BehaviorSubject<ConnectedUsermodel | null>(null);
-  isConnected$ : Observable<ConnectedUsermodel | null> = this._isConnected$.asObservable();
+  private _connectedUser$ : BehaviorSubject<ConnectedUsermodel | null> = new BehaviorSubject<ConnectedUsermodel | null>(null);
+  isConnected$ : Observable<ConnectedUsermodel | null> = this._connectedUser$.asObservable();
 
   constructor(private _httpClient : HttpClient, private _router : Router) { }
 
@@ -26,7 +26,6 @@ export class AuthService {
     });
   }
 
-
   login(loginForm : loginModel) : void {
     console.log(loginForm)
     this._httpClient.post<ConnectedUsermodel>(this._url+'login', loginForm).subscribe({
@@ -38,12 +37,13 @@ export class AuthService {
   }
 
   private connectUser(user : ConnectedUsermodel):void{
+    console.log(user)//TODO remove log
     localStorage.setItem('token', user.token);
-    this._isConnected$.next(user);
+    this._connectedUser$.next(user);
   }
 
   logout() : void {
     localStorage.removeItem('token');
-    this._isConnected$.next(null);
+    this._connectedUser$.next(null);
   }
 }
