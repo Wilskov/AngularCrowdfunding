@@ -7,7 +7,7 @@ import { FooterComponent } from './componants/footer/footer.component';
 import { AdminComponent } from './admin-panel/admin/admin.component';
 import { LoginComponent } from './componants/login/login.component';
 import { HomeComponent } from './componants/home/home.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
@@ -16,6 +16,7 @@ import { AppComponent } from './app.component';
 import { Comment } from '@angular/compiler';
 import { CommonModule } from '@angular/common';
 import {IndexComponent} from './componants/projets/index/index.component'
+import { TokenInterceptorInterceptor } from './services/token-interceptor.interceptor';
 
 
 @NgModule({
@@ -38,7 +39,9 @@ import {IndexComponent} from './componants/projets/index/index.component'
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptorInterceptor, multi: true }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
