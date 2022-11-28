@@ -14,7 +14,7 @@ export class NavbarComponent implements OnInit {
   constructor(private authService : AuthService,private router: Router) { }
 
   ngOnInit(): void {
-    this.authService.isConnected$.subscribe( c => this.isConnected = c ? true : false  )
+    this.authService.connectedUser$.subscribe( c => this.isConnected = c ? true : false  )
   }
 
   goToCreatProjet(){

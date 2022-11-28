@@ -18,6 +18,7 @@ const routes: Routes = [
   //{path:'admin',component: AdminComponent, canActivate: []},
   {path:"createprojet",component : CreateProjetFormComponent},
   {path:"palier",component : CreatePalierFormComponent},
+  {path:"**",component : HomeComponent}
 ];
 
 @NgModule({

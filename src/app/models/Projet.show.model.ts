@@ -6,7 +6,7 @@ export class showProjetModel {
     titre: string
     Description: string
     Objectif: number
-    TypeStatus: string
+    typeStatus: string
     ContributionTotal: number
     paliers: CreatPalierModel[]
     progress: number
@@ -21,7 +21,7 @@ export class showProjetModel {
         titre: string,
         Description: string,
         Objectif: number,
-        TypeStatus: string,
+        typeStatus: string,
         ContributionTotal: number,
         paliers: CreatPalierModel[],
         compteBQ: string,
@@ -32,7 +32,7 @@ export class showProjetModel {
         this.titre = titre
         this.Description = Description
         this.Objectif = Objectif
-        this.TypeStatus = TypeStatus
+        this.typeStatus = typeStatus
         this.ContributionTotal = ContributionTotal
         this.paliers = paliers
         this.compteBQ = compteBQ

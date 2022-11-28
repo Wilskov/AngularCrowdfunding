@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Router } from '@angular/router';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { loginModel } from '../models/login.model';
 import { ConnectedUsermodel } from '../models/ConnectedUser.model';
@@ -13,9 +12,19 @@ export class AuthService {
   private _url : string = "http://localhost:5011/api/User/";
 
   private _connectedUser$ : BehaviorSubject<ConnectedUsermodel | null> = new BehaviorSubject<ConnectedUsermodel | null>(null);
-  isConnected$ : Observable<ConnectedUsermodel | null> = this._connectedUser$.asObservable();
+  connectedUser$ : Observable<ConnectedUsermodel | null> = this._connectedUser$.asObservable();
+  ConnectedUser : ConnectedUsermodel | null = null
 
-  constructor(private _httpClient : HttpClient, private _router : Router) { }
+
+
+  constructor(private _httpClient : HttpClient) {
+    //update ConnectedUser to get conected without subcribe
+    this._connectedUser$.subscribe( u => this.ConnectedUser = u )
+  }
+
+  getAll() : Observable<ConnectedUsermodel[]> {
+    return this._httpClient.get<ConnectedUsermodel[]>(this._url);
+  }
 
 
   register(registerForm : any) : void {

@@ -14,7 +14,7 @@ export class AppComponent {
   isAdmin: boolean = false; 
 
   constructor (private router : Router, private authService : AuthService) {
-    authService.isConnected$.subscribe((u:ConnectedUsermodel | null) => {
+    authService.connectedUser$.subscribe((u:ConnectedUsermodel | null) => {
       this.isAdmin = u ? (u.role === "Admin") : false
       console.log(`is admin ${this.isAdmin}`)
     })
